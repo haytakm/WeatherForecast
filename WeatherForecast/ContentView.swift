@@ -10,6 +10,33 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        TabView {
+            HomeView()
+                .tabItem {
+                    Label("Weather",systemImage: "sun.dust.circle.fill")
+                }
+            AboutMe()
+                .tabItem{
+                    Label("About Me",systemImage: "person.circle.fill")
+                }
+        }
+    }
+}
+
+
+#Preview {
+    ContentView()
+}
+
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+
+struct HomeView: View {
+    var body: some View {
         ZStack {
             Color(backgroundColor)
                 .ignoresSafeArea()
@@ -28,8 +55,14 @@ struct ContentView: View {
     }
 }
 
-#Preview {
-    ContentView()
+struct AboutMe: View {
+    var body: some View {
+        VStack {
+            Text("All About")
+                .font(.largeTitle)
+            
+        }
+    }
 }
 
 struct DayForecast: View {
@@ -80,3 +113,17 @@ struct DayForecast: View {
         .padding(15)
     }
 }
+
+struct Info {
+    let image: String
+    let name: String
+    let story: String
+    let age: Int
+    let hobbies: [String]
+    let foods: [String]
+    let colors: [String]
+    let funFacts: [String]
+}
+
+let information = Info(image: "person.crop.circle.dashed.circle.fill", name: "Mert", story: "Now my story begins with Swift.", age: 29, hobbies: ["Sailing", "coding", "drawing"], foods: ["Manti", "Kariyarik", "Kapama"], colors: ["Purple"], funFacts: ["I sneeze 10 times in a row"])
+
