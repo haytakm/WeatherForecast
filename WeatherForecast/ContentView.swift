@@ -13,11 +13,17 @@ struct ContentView: View {
         ZStack {
             Color(backgroundColor)
                 .ignoresSafeArea()
-            HStack {
-            
-                DayForecast(day:"Sunday",high:21,low:14, isRainy: false)
-                DayForecast(day:"Monday",high:18,low:13, isRainy: true)
+            ScrollView {
+                VStack {
+                    DayForecast(day:"Sunday",high:21,low:14, isRainy: false)
+                    DayForecast(day:"Monday",high:18,low:13, isRainy: true)
+                    DayForecast(day: "Wednesday", high: 22, low: 18, isRainy: false)
+                    DayForecast(day: "Thursday", high: 26, low: 19, isRainy: false)
+                    DayForecast(day: "Friday", high: 19, low: 16, isRainy: true)
+                    DayForecast(day: "Saturday", high: 23, low: 19, isRainy: false)
+                }
             }
+            .defaultScrollAnchor(.top)
         }
     }
 }
@@ -62,6 +68,6 @@ struct DayForecast: View {
                 .fontWeight(.medium)
                 .foregroundStyle(Color.secondary)
         }
-        .padding()
+        .padding(15)
     }
 }
