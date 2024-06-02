@@ -54,6 +54,14 @@ struct DayForecast: View {
         }
     }
     
+    var textColor: Color {
+        if high > 20 {
+            return Color.red
+        } else {
+            return Color.teal
+        }
+    }
+    
     var body: some View {
         VStack {
             Text(day)
@@ -64,6 +72,7 @@ struct DayForecast: View {
                 .padding(1)
             Text("High: \(high)")
                 .fontWeight(.semibold)
+                .foregroundStyle(textColor)
             Text("Low: \(low)")
                 .fontWeight(.medium)
                 .foregroundStyle(Color.secondary)
