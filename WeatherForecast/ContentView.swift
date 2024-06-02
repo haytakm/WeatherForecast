@@ -5,13 +5,19 @@
 //  Created by Hayta on 2.06.2024.
 //
 let myColor = #colorLiteral(red: 0.8321695924, green: 0.985483706, blue: 0.4733308554, alpha: 1)
+let backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        HStack {
-            DayForecast(day:"Sunday",high:21,low:14, isRainy: false)
-            DayForecast(day:"Monday",high:18,low:13, isRainy: true)
+        ZStack {
+            Color(backgroundColor)
+                .ignoresSafeArea()
+            HStack {
+            
+                DayForecast(day:"Sunday",high:21,low:14, isRainy: false)
+                DayForecast(day:"Monday",high:18,low:13, isRainy: true)
+            }
         }
     }
 }
