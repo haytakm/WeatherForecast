@@ -10,6 +10,33 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        TabView {
+            HomeView()
+                .tabItem {
+                    Label("Weather",systemImage: "sun.dust.circle.fill")
+                }
+            AboutMe()
+                .tabItem{
+                    Label("About Me",systemImage: "person.circle.fill")
+                }
+        }
+    }
+}
+
+
+#Preview {
+    ContentView()
+}
+
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+
+struct HomeView: View {
+    var body: some View {
         ZStack {
             Color(backgroundColor)
                 .ignoresSafeArea()
@@ -28,8 +55,60 @@ struct ContentView: View {
     }
 }
 
-#Preview {
-    ContentView()
+struct AboutMe: View {
+    var body: some View {
+        ScrollView {
+            VStack {
+                Text("All About")
+                    .font(.largeTitle)
+                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    .padding()
+                
+                Image(systemName:information.image)
+                    .foregroundColor(Color.purple)
+                
+                Text(information.name)
+                    .font(.title)
+                
+                Text("\(information.age)")
+                
+                Text(information.story)
+                    .padding()
+                    .font(.callout)
+                    .fontWeight(.light)
+                
+                Text("My hobbies are")
+                    .padding()
+                    .font(.title2)
+                HStack {
+                    ForEach(information.hobbies, id: \.self) { hobby in
+                        Text(hobby)
+                    }
+                }
+                
+                Text("My fav foods are")
+                    .font(.title2)
+                    .padding()
+                HStack {
+                    ForEach(information.foods, id: \.self) { food in
+                        Text(food)
+                    }
+                }
+                
+                Text("Fun facts about me")
+                    .font(.title2)
+                    .padding()
+                HStack {
+                    ForEach(information.funFacts, id: \.self)
+                    { fact in
+                        Text(fact)
+                    }
+                }
+                
+            }
+        }
+        .defaultScrollAnchor(.top)
+    }
 }
 
 struct DayForecast: View {
@@ -80,3 +159,17 @@ struct DayForecast: View {
         .padding(15)
     }
 }
+
+struct Info {
+    let image: String
+    let name: String
+    let story: String
+    let age: Int
+    let hobbies: [String]
+    let foods: [String]
+    let colors: String
+    let funFacts: [String]
+}
+
+let information = Info(image: "person.crop.circle.dashed.circle.fill", name: "Mert", story: "Now my story begins with Swift", age: 29, hobbies: ["Sailing", "Coding", "Drawing"], foods: ["Mantı", "Karnıyarık", "Kapama"], colors: "purple", funFacts: ["I sneeze 10 times in a row"])
+
