@@ -15,6 +15,8 @@
 		EE30D2BC2C0CC67400698C6D /* WeatherForecastUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE30D2BB2C0CC67400698C6D /* WeatherForecastUITests.swift */; };
 		EE30D2BE2C0CC67400698C6D /* WeatherForecastUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE30D2BD2C0CC67400698C6D /* WeatherForecastUITestsLaunchTests.swift */; };
 		EE30D2CB2C0E650300698C6D /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE30D2CA2C0E650300698C6D /* WelcomePage.swift */; };
+		EE30D2CF2C0E6E3000698C6D /* FeatureCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE30D2CE2C0E6E3000698C6D /* FeatureCard.swift */; };
+		EE30D2D12C0E6E7100698C6D /* FeaturesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE30D2D02C0E6E7100698C6D /* FeaturesPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		EE30D2BB2C0CC67400698C6D /* WeatherForecastUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecastUITests.swift; sourceTree = "<group>"; };
 		EE30D2BD2C0CC67400698C6D /* WeatherForecastUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecastUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EE30D2CA2C0E650300698C6D /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
+		EE30D2CE2C0E6E3000698C6D /* FeatureCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCard.swift; sourceTree = "<group>"; };
+		EE30D2D02C0E6E7100698C6D /* FeaturesPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 				EE30D2A02C0CC67200698C6D /* WeatherForecastApp.swift */,
 				EE30D2A22C0CC67200698C6D /* ContentView.swift */,
 				EE30D2CA2C0E650300698C6D /* WelcomePage.swift */,
+				EE30D2CE2C0E6E3000698C6D /* FeatureCard.swift */,
+				EE30D2D02C0E6E7100698C6D /* FeaturesPage.swift */,
 				EE30D2A42C0CC67400698C6D /* Assets.xcassets */,
 				EE30D2A62C0CC67400698C6D /* Preview Content */,
 			);
@@ -262,6 +268,8 @@
 			files = (
 				EE30D2CB2C0E650300698C6D /* WelcomePage.swift in Sources */,
 				EE30D2A32C0CC67200698C6D /* ContentView.swift in Sources */,
+				EE30D2CF2C0E6E3000698C6D /* FeatureCard.swift in Sources */,
+				EE30D2D12C0E6E7100698C6D /* FeaturesPage.swift in Sources */,
 				EE30D2A12C0CC67200698C6D /* WeatherForecastApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
