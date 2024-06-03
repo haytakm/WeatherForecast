@@ -8,9 +8,13 @@ let myColor = #colorLiteral(red: 0.8321695924, green: 0.985483706, blue: 0.47333
 let backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
 import SwiftUI
 
+let gradientColors: [Color] = [.gradientTop,.gradientBottom]
+
 struct ContentView: View {
     var body: some View {
         TabView {
+            WelcomePage()
+            FeaturesPage()
             HomeView()
                 .tabItem {
                     Label("Weather",systemImage: "sun.dust.circle.fill")
@@ -20,6 +24,9 @@ struct ContentView: View {
                     Label("About Me",systemImage: "person.circle.fill")
                 }
         }
+        .background(Gradient(colors: gradientColors))
+        .tabViewStyle(.page)
+        .foregroundStyle(.white)
     }
 }
 
@@ -38,8 +45,6 @@ struct ContentView_Previews: PreviewProvider {
 struct HomeView: View {
     var body: some View {
         ZStack {
-            Color(backgroundColor)
-                .ignoresSafeArea()
             ScrollView {
                 VStack {
                     DayForecast(day:"Sunday",high:21,low:14, isRainy: false)
